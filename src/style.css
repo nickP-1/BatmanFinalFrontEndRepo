@@ -1,0 +1,564 @@
+:root {
+    --navy: #0B1F3A;
+    --light-navy: #132D4F;
+    --gold: #D4AF37;
+    --background: rgb(83, 107, 124);
+    --white: #FFFFFF;
+    --text: #dae5ec;
+    --gray: #667085;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*NavBar*/
+
+.navbar {
+    background-color: var(--navy);
+    border-bottom: 3px solid var(--gold);
+}
+
+.nav-container {
+    max-width: 1200px;
+    min-height: 75px;
+
+    margin: 0 auto;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* CourseHub logo */
+
+.nav-logo {
+    color: var(--gold);
+
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* Navigation links */
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--white);
+
+    font-weight: 500;
+
+    padding: 8px 0;
+
+    border-bottom: 2px solid transparent;
+
+    transition: 0.2s;
+}
+
+
+/* Link hover */
+
+.nav-link:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+}
+
+
+/* =========================
+   HERO SECTION
+   ========================= */
+
+.hero {
+    background-color: var(--navy);
+    color: var(--white);
+
+    min-height: 450px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+
+/* Small gold heading */
+
+.eyebrow {
+    color: var(--gold);
+
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Main heading */
+
+.hero h1 {
+    font-size: 3.5rem;
+
+    margin-bottom: 20px;
+}
+
+
+/* Hero description */
+
+.hero p:not(.eyebrow) {
+    color: #D9E0E8;
+
+    font-size: 1.2rem;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTON
+   ========================= */
+
+.btn {
+    display: inline-block;
+
+    background-color: var(--gold);
+    color: var(--navy);
+
+    padding: 12px 25px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--white);
+}
+
+
+/*Course Preview */
+
+.courses-preview {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 80px 30px;
+}
+
+
+/* Section heading */
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 2rem;
+
+    margin-bottom: 10px;
+}
+
+.section-heading p:last-child {
+    color: var(--text);
+}
+
+
+/*COURSE CARDS*/
+
+.course-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.course-card {
+    background-color: var(--white);
+
+    padding: 30px;
+
+    border-radius: 8px;
+
+    border-top: 4px solid var(--gold);
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+    transition: 0.2s;
+}
+
+
+/*Card hover*/
+
+.course-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/*Course number*/
+
+.course-number {
+    color: var(--gold);
+
+    font-weight: bold;
+
+    font-size: 0.9rem;
+}
+
+
+/*Course name*/
+
+.course-card h3 {
+    color: var(--navy);
+
+    margin: 10px 0;
+}
+
+
+/* Subject */
+
+.course-card p {
+    color: var(--gray);
+
+    margin-bottom: 15px;
+}
+
+
+/* Credits */
+
+.credits {
+    color: var(--navy);
+
+    font-weight: bold;
+}
+
+
+/*Features*/
+
+.features {
+    background-color: var(--white);
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px;
+
+    padding: 70px 30px;
+}
+
+
+.feature {
+    max-width: 350px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.feature h3 {
+    color: var(--navy);
+
+    margin-bottom: 10px;
+}
+
+
+.feature p {
+    color: var(--gray);
+}
+
+
+/*Footer*/
+
+footer {
+    background-color: var(--navy);
+
+    color: var(--white);
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+@media (max-width: 768px) {
+
+    .nav-container {
+        flex-direction: column;
+
+        padding: 20px;
+
+        gap: 15px;
+    }
+
+
+    .nav-links {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* TEACHER PAGE */
+.teacher-page {
+    background-color: var(--background);
+    min-height: calc(100vh - 78px);
+}
+
+.teacher-header {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.teacher-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.teacher-header p:not(.eyebrow) {
+    color: #D9E0E8;
+}
+
+.teacher-courses {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+.teacher-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.teacher-section-header h2 {
+    color: var(--text);
+    font-size: 2rem;
+}
+
+.teacher-section-header p {
+    color: var(--text);
+}
+
+.teacher-course-list {
+    display: grid;
+    gap: 25px;
+}
+
+.teacher-course-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    border-top: 4px solid var(--gold);
+    padding: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.course-info h3 {
+    color: var(--navy);
+    margin: 10px 0;
+}
+
+.course-info p {
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+
+.course-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.course-actions button,
+.student-row button {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.edit-btn {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+.delete-btn,
+.remove-btn {
+    background-color: #B42318;
+    color: var(--white);
+}
+
+.students {
+    border-top: 1px solid #E5E7EB;
+    margin-top: 25px;
+    padding-top: 20px;
+}
+
+.students h4 {
+    color: var(--navy);
+    margin-bottom: 15px;
+}
+
+.student-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.student-row span {
+    color: var(--navy);
+}
+.teacher-nav-button {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+/* INTERACTIVE COURSE CARDS */
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.course-card-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    border: none;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.course-card-toggle p {
+    margin-bottom: 15px;
+}
+
+.expand-label {
+    margin-top: 14px;
+    color: var(--navy);
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.course-card-details {
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid #D9DEE7;
+}
+
+.course-card-details .course-description {
+    color: var(--gray);
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+    margin-bottom: 20px;
+}
+
+.course-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+.add-to-checkout-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: var(--navy);
+    color: var(--white);
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.add-to-checkout-btn:hover:not(:disabled) {
+    background-color: var(--light-navy);
+}
+
+.add-to-checkout-btn:disabled {
+    background-color: var(--gold);
+    color: var(--navy);
+    cursor: default;
+}
+
+.course-card-toggle:focus-visible, .add-to-checkout-btn:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+}
+
+
+@media (max-width: 768px) {
+    .course-card {
+        padding: 24px;
+    }
+}
